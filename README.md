@@ -2,7 +2,7 @@
 
 Flipping is a mini _static server_ and _frontend template_ for **single page application** (SPA) projects, developed in **Pure JavaScript** (no framework) by [Jailson Lima]().
 
-> [Versão em português]()
+> [Versão em português](https://github.com/jailson-code/flipping/blob/main/README.pt.md)
 
 ## Single Page Application
 
