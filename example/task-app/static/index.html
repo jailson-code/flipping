@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/css/layout.css">
+   <title>Single Page Application</title>
+</head>
+<body>
+   <nav>
+      <ul>
+         <li><a href="/" data-link>Dashboard</a></li>
+         <li><a href="/tasks" data-link>Tasks</a></li>
+         <li><a href="/places" data-link>Places</a></li>
+         <li><a href="/settings" data-link>Settings</a></li>
+      </ul>
+      <div class="mode">
+         <span class="mode-text">Dark Mode</span>
+         <div class="mode-switch"></div>
+      </div>
+   </nav>
+
+   <!-- Application -->
+   <div id="app"></div>
+
+   <script type="module" src="/js/main.js"></script>
+</body>
+</html>

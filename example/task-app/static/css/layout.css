@@ -1,0 +1,392 @@
+@font-face {
+   font-family: "Inter";
+   src: url("/assets/fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+   font-family: "Inter Bold";
+   src: url("/assets/fonts/Inter-SemiBold.ttf");
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   --color-primary: #0088EE;
+   --color-primary-light: #1199FF;
+   --color-background: #FFFFFF;
+   --color-base-1: #F8F8F8;
+   --color-base-2: #E8E8E8;
+   --color-base-3: #D8D8D8;
+   --color-base-4: #C8C8C8;
+   --color-text-1: #444444;
+   --color-text-2: #666666;
+   --color-text-3: #FFFFFF;
+   --color-text-4: #AAAAAA;
+   --color-line: #D8D8D8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+   background-color: var(--color-background);
+   overflow-x: hidden;
+}
+
+body.dark {
+   --color-primary: #0088EE;
+   --color-primary-light: #1199FF;
+   --color-background: #181818;
+   --color-base-1: #202020;
+   --color-base-2: #282828;
+   --color-base-3: #303030;
+   --color-base-4: #383838;
+   --color-text-1: #BBBBBB;
+   --color-text-2: #888888;
+   --color-text-3: #FFFFFF;
+   --color-text-4: #666666;
+   --color-line: #303030;
+}
+
+nav {
+   position: fixed;
+   display: block;
+   top: 0;
+   left: 0;
+   width: 240px;
+   height: 100vh;
+   background-color: var(--color-base-1);
+}
+
+nav ul {
+   position: relative;
+   display: block;
+   list-style: none;
+}
+
+nav ul li {
+   position: relative;
+   display: block;
+}
+
+nav ul li a {
+   position: relative;
+   display: block;
+   padding: 10px 20px;
+   font-family: "Inter Bold", sans-serif;
+   font-size: 16px;
+   font-weight: 500;
+   text-decoration: none;
+   color: var(--color-text-1);
+   background-color: var(--color-base-1);
+}
+
+nav ul li a:hover {
+   color: var(--color-text-1);
+   background-color: var(--color-base-3);
+}
+
+.selected {
+   color: var(--color-primary);
+   background-color: var(--color-base-2);
+}
+
+.selected:hover {
+   color: var(--color-primary);
+   background-color: var(--color-base-3);
+}
+
+.mode {
+   position: absolute;
+   display: flex;
+   bottom: 20px;
+   left: 20px;
+   width: 160px;
+   height: 60px;
+   padding: 0 20px;
+   border-radius: 4px;
+   justify-content: space-between;
+   align-items: center;
+   background-color: var(--color-base-2);
+}
+
+.mode-text {
+   position: relative;
+   display: inline-block;
+   font-family: "Inter Bold", sans-serif;
+   font-size: 16px;
+   font-weight: 500;
+   color: var(--color-text-1);
+}
+
+.mode-switch {
+   position: relative;
+   display: inline-block;
+   width: 45px;
+   height: 24px;
+   border-radius: 12px;
+   background-color: var(--color-base-3);
+   cursor: pointer;
+}
+
+.mode-switch::before {
+   content: "";
+   position: absolute;
+   display: block;
+   top: 4px;
+   left: 4px;
+   width: 16px;
+   height: 16px;
+   border-radius: 8px;
+   background-color: var(--color-primary);
+   transition: left 0.3s;
+}
+
+.mode-switch:hover {
+   background-color: var(--color-base-4);
+}
+
+body.dark .mode-switch::before {
+   left: 24px;
+}
+
+h1 {
+   font-family: "Inter Bold", sans-serif;
+   font-size: 64px;
+   font-weight: 500;
+   color: var(--color-text-1);
+}
+
+p {
+   margin: 20px 0;
+   font-family: "Inter", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   color: var(--color-text-2);
+}
+
+button {
+   padding: 10px 20px;
+   border: none;
+   border-radius: 4px;
+   outline: none;
+   font-family: "Inter", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   color: var(--color-text-3);
+   background-color: var(--color-primary);
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: var(--color-primary-light);
+}
+
+input {
+   padding: 10px 20px;
+   border: 1px solid var(--color-line);
+   border-radius: 4px;
+   outline: none;
+   font-family: "Inter", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   color: var(--color-text-1);
+   background-color: var(--color-base-1);
+}
+
+input:focus {
+   border-color: var(--color-primary);
+}
+
+input::placeholder {
+   color: var(--color-text-4);
+}
+
+/* Web Components */
+
+check-icon, pen-button, trash-button {
+   position: relative;
+}
+
+/* Application */
+
+#app {
+   position: absolute;
+   display: block;
+   top: 0;
+   left: 240px;
+   width: calc(100% - 240px);
+   height: fit-content;
+}
+
+/* View */
+
+.view {
+   position: relative;
+   display: none;
+   margin: 40px;
+   padding: 40px;
+   border: 1px solid var(--color-line);
+   border-radius: 4px;
+}
+
+/* Dashboard */
+
+#dashboard {}
+
+/* TaskList */
+
+#task-list {}
+
+.tasks {
+   position: relative;
+   display: none;
+   margin-top: 40px;
+   list-style: none;
+}
+
+.tasks li {
+   position: relative;
+   display: flex;
+   border: 1px solid var(--color-base-1);
+   border-radius: 4px;
+   margin: 5px 0;
+   padding: 15px 20px;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+   background-color: var(--color-base-1);
+   cursor: pointer;
+}
+
+.tasks li:hover {
+   border-color: var(--color-base-4);
+}
+
+.tasks li div {
+   position: relative;
+   display: flex;
+   gap: 10px;
+}
+
+.tasks li div small {
+   position: relative;
+   font-family: "Inter", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   color: var(--color-text-1);
+}
+
+/* TaskAdd */
+
+#task-add {}
+
+#task-add__add {
+   margin-left: 10px;
+}
+
+/* TaskEdit */
+
+#task-edit {}
+
+#task-edit__save {
+   margin-left: 10px;
+}
+
+/* TaskView */
+
+#task-view {}
+
+/* PlaceList */
+
+#place-list {}
+
+.places {
+   position: relative;
+   display: none;
+   margin-top: 40px;
+   list-style: none;
+}
+
+.places li {
+   position: relative;
+   display: flex;
+   border: 1px solid var(--color-base-1);
+   border-radius: 4px;
+   margin: 5px 0;
+   padding: 15px 20px;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+   background-color: var(--color-base-1);
+   cursor: pointer;
+}
+
+.places li:hover {
+   border-color: var(--color-base-4);
+}
+
+.places li div {
+   position: relative;
+   display: flex;
+   gap: 10px;
+}
+
+.places li div label {
+   position: relative;
+   cursor: pointer;
+}
+
+.places li div label small {
+   position: relative;
+   display: block;
+   font-family: "Inter", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   color: var(--color-text-1);
+}
+
+.places li div label span {
+   position: relative;
+   display: block;
+   font-family: "Inter", sans-serif;
+   font-size: 14px;
+   font-weight: 400;
+   color: var(--color-text-4);
+}
+
+/* PlaceAdd */
+
+#place-add {}
+
+#place-add form {
+   position: relative;
+   display: grid;
+   width: 550px;
+   grid-template-columns: 1fr 1fr;
+   gap: 10px;
+}
+
+/* PlaceEdit */
+
+#place-edit {}
+
+#place-edit form {
+   position: relative;
+   display: grid;
+   width: 550px;
+   grid-template-columns: 1fr 1fr;
+   gap: 10px;
+}
+
+/* PlaceView */
+
+#place-view {}
+
+/* Settings */
+
+#settings {}
