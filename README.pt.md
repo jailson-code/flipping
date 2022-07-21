@@ -516,16 +516,16 @@ A estrutura de organização da pasta do projeto segue abaixo. O nome genérico 
 
 ```
 ├── project
-│   ├── resource
+│   ├── src
 │   │   ├── constants.js
+│   │   ├── logger.js
 │   │   ├── settings.js
-│   │   ├── terminal.js
 │   ├── static
 │   ├── package.json
 │   ├── server.js
 ```
 
-Os arquivos da pasta `resource`: `constants.js`, `settings.js` e `terminal.js` contém constantes e funções utilizadas pelo servidor. Em especial o arquivo `settings.js` contem as configurações de porta, pasta estática e cache do servidor que podem ser editadas caso seja necessário. Na pasta `static` fica a aplicação frontend em si. O arquivo `package.json` é o arquivo descritor do projeto. Por fim, o arquivo `server.js` contem o código principal do **servidor de arquivos estáticos** para a aplicação frontend do tipo **single page application**.
+Os arquivos da pasta `src`: `constants.js`, `logger.js` e `settings.js` contém constantes e funções utilizadas pelo servidor. Em especial o arquivo `settings.js` contem as configurações de porta, pasta estática e cache do servidor que podem ser editadas caso seja necessário. Na pasta `static` fica a aplicação frontend em si. O arquivo `package.json` é o arquivo descritor do projeto. Por fim, o arquivo `server.js` contem o código principal do **servidor de arquivos estáticos** para a aplicação frontend do tipo **single page application**.
 
 **Regras do servidor:**
 

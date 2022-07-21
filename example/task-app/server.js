@@ -8,9 +8,9 @@
 import http from "http"
 import path from "path"
 import fs from "fs"
-import { statusCode, mimeType } from "./resource/constants"
-import { SUCCESS, WARNING, DANGER } from "./resource/terminal"
-import { PORT, STATIC_PATH, ALLOW_ORIGIN, CACHE, SERVER } from "./resource/settings"
+import { statusCode, mimeType } from "./src/constants"
+import { SUCCESS, WARNING, DANGER } from "./src/logger"
+import { PORT, STATIC_PATH, ALLOW_ORIGIN, CACHE, SERVER } from "./src/settings"
 
 // Create the server.
 let server = http.createServer((request, response) => {

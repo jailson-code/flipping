@@ -517,16 +517,16 @@ The project folder organization structure follows below. The generic name of the
 
 ```
 ├── project
-│   ├── resource
+│   ├── src
 │   │   ├── constants.js
+│   │   ├── logger.js
 │   │   ├── settings.js
-│   │   ├── terminal.js
 │   ├── static
 │   ├── package.json
 │   ├── server.js
 ```
 
-The files in the `resource` folder: `constants.js`, `settings.js` and `terminal.js` contain constants and functions used by the server. In particular the `settings.js` file contains the port, static folder and server cache settings that can be edited if necessary. In the `static` folder is the frontend application itself. The `package.json` file is the project descriptor file. Finally, the `server.js` file contains the main code of the **static file server** for the frontend application of type **single page application**.
+The files in the `src` folder: `constants.js`, `logger.js` and `settings.js` contain constants and functions used by the server. In particular the `settings.js` file contains the port, static folder and server cache settings that can be edited if necessary. In the `static` folder is the frontend application itself. The `package.json` file is the project descriptor file. Finally, the `server.js` file contains the main code of the **static file server** for the frontend application of type **single page application**.
 
 **Server rules:**
 
